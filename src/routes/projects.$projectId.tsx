@@ -19,10 +19,28 @@ export const Route = createFileRoute("/projects/$projectId")({
     const p = loaderData.project;
     return {
       meta: [
-        { title: `${p.title} — AI FYP Catalog 2026` },
-        { name: "description", content: p.hook },
+        { title: `${p.title} — ${p.domain} AI Project | AI FYP Catalog 2026` },
+        { name: "description", content: `${p.hook} ${p.difficulty} level, ${p.timelineLabel}, ${p.teamSize}. Full stack, roadmap, and datasets included.` },
+        { name: "keywords", content: `${p.title}, ${p.domain}, ${p.difficulty} AI project, ${p.timelineLabel} project, final year project, ${p.stack.aiml.join(", ")}` },
+        
+        // OpenGraph
+        { property: "og:type", content: "article" },
+        { property: "og:url", content: `https://zfai-fyp.vercel.app/projects/${p.id}` },
         { property: "og:title", content: `${p.title} — AI FYP Catalog 2026` },
         { property: "og:description", content: p.hook },
+        { property: "og:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { property: "og:site_name", content: "AI FYP Catalog 2026" },
+        
+        // Twitter Card
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: `${p.title} — AI FYP Catalog 2026` },
+        { name: "twitter:description", content: p.hook },
+        { name: "twitter:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+        
+        // Additional SEO
+        { name: "robots", content: "index, follow" },
       ],
     };
   },

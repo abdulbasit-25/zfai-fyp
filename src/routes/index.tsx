@@ -9,18 +9,44 @@ import { clearCompare, useStore } from "@/lib/workspace";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AI FYP Catalog 2026 — Browse & Plan Final-Year AI Projects" },
+      { title: "AI FYP Catalog 2026 — 111 Final-Year AI Projects with Stacks & Roadmaps" },
       {
         name: "description",
         content:
-          "Researched final-year AI project ideas with stacks, roadmaps and datasets — plus a kanban workspace to plan and track the one you pick.",
+          "Browse 111 researched final-year AI project ideas with complete tech stacks, phase-by-phase roadmaps, datasets, and failure modes. Plus a kanban workspace to plan and track your chosen project.",
       },
-      { property: "og:title", content: "AI FYP Catalog 2026" },
+      { name: "keywords", content: "AI projects, final year project, FYP, machine learning, deep learning, NLP, computer vision, project ideas 2026, student projects, AI catalog" },
+      
+      // OpenGraph
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://zfai-fyp.vercel.app/" },
+      { property: "og:title", content: "AI FYP Catalog 2026 — 111 Final-Year AI Projects" },
       {
         property: "og:description",
         content:
-          "Browse 11 AI final-year project specs and turn the one you choose into a tracked workspace.",
+          "Browse 111 AI final-year project specs with stacks, roadmaps and datasets. Pick one and track it in a working kanban board all year.",
       },
+      { property: "og:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "AI FYP Catalog 2026 — Browse final-year AI projects" },
+      { property: "og:site_name", content: "AI FYP Catalog 2026" },
+      
+      // Twitter Card
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "AI FYP Catalog 2026 — 111 Final-Year AI Projects" },
+      {
+        name: "twitter:description",
+        content:
+          "Browse 111 AI final-year project specs with stacks, roadmaps and datasets. Pick one and track it in a working kanban board.",
+      },
+      { name: "twitter:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { name: "twitter:image:alt", content: "AI FYP Catalog 2026" },
+      
+      // Additional SEO
+      { name: "author", content: "ARCHER Research Agent" },
+      { name: "robots", content: "index, follow" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
     ],
   }),
   component: Catalog,

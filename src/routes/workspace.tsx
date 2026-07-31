@@ -22,19 +22,38 @@ import {
 export const Route = createFileRoute("/workspace")({
   head: () => ({
     meta: [
-      { title: "My Workspace — AI FYP Catalog 2026" },
+      { title: "My Workspace — Track Your AI FYP Progress | AI FYP Catalog 2026" },
       {
         name: "description",
         content:
-          "A to-do list, progress tracker and timestamped notes log for the final-year AI project you picked — saved in your browser.",
+          "A to-do list, progress tracker and timestamped notes log for the final-year AI project you picked. Everything saved in your browser — no signup required.",
       },
-      { property: "og:title", content: "My Workspace — AI FYP Catalog 2026" },
+      { name: "keywords", content: "FYP workspace, project tracker, AI project management, kanban board, todo list, progress tracker" },
+      
+      // OpenGraph
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://zfai-fyp.vercel.app/workspace" },
+      { property: "og:title", content: "My Workspace — Track Your AI FYP Progress" },
       {
         property: "og:description",
         content: "Track tasks, progress and decisions for your final-year AI project.",
       },
-      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:site_name", content: "AI FYP Catalog 2026" },
+      
+      // Twitter Card
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "My Workspace — Track Your AI FYP Progress" },
+      {
+        name: "twitter:description",
+        content: "Track tasks, progress and decisions for your final-year AI project.",
+      },
+      { name: "twitter:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      
+      // Additional SEO
+      { name: "robots", content: "index, follow" },
     ],
   }),
   component: Workspace,

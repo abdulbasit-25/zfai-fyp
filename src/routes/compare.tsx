@@ -6,17 +6,38 @@ import { clearCompare, startProject, toggleCompare, useStore } from "@/lib/works
 export const Route = createFileRoute("/compare")({
   head: () => ({
     meta: [
-      { title: "Compare Projects — AI FYP Catalog 2026" },
+      { title: "Compare AI Projects Side-by-Side — AI FYP Catalog 2026" },
       {
         name: "description",
         content:
-          "Put two or three final-year AI project ideas side by side: difficulty, timeline, team size, stack overlap and shared challenges.",
+          "Compare up to 3 final-year AI projects side-by-side: difficulty, timeline, team size, tech stack overlap, and shared challenges. Make an informed choice for your FYP.",
       },
-      { property: "og:title", content: "Compare Projects — AI FYP Catalog 2026" },
+      { name: "keywords", content: "compare AI projects, side-by-side comparison, FYP comparison, project selection, final year project" },
+      
+      // OpenGraph
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://zfai-fyp.vercel.app/compare" },
+      { property: "og:title", content: "Compare AI Projects Side-by-Side — AI FYP Catalog 2026" },
       {
         property: "og:description",
-        content: "Side-by-side comparison of AI final-year project ideas to help you commit to one.",
+        content: "Compare up to 3 AI final-year projects: difficulty, timeline, stack overlap, and challenges.",
       },
+      { property: "og:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:site_name", content: "AI FYP Catalog 2026" },
+      
+      // Twitter Card
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Compare AI Projects Side-by-Side — AI FYP Catalog 2026" },
+      {
+        name: "twitter:description",
+        content: "Compare up to 3 AI final-year projects: difficulty, timeline, stack overlap, and challenges.",
+      },
+      { name: "twitter:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      
+      // Additional SEO
+      { name: "robots", content: "index, follow" },
     ],
   }),
   component: Compare,
