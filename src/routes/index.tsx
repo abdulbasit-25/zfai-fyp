@@ -27,6 +27,8 @@ export const Route = createFileRoute("/")({
           "Browse AI final-year project specs with stacks, roadmaps and datasets. Pick one and track it in a working kanban board all year.",
       },
       { property: "og:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { property: "og:image:secure_url", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "AI FYP Catalog 2026 — Browse final-year AI projects" },
@@ -41,6 +43,7 @@ export const Route = createFileRoute("/")({
           "Browse AI final-year project specs with stacks, roadmaps and datasets. Pick one and track it in a working kanban board.",
       },
       { name: "twitter:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { name: "twitter:image:src", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
       { name: "twitter:image:alt", content: "AI FYP Catalog 2026" },
       
       // Additional SEO

@@ -39,6 +39,8 @@ export const Route = createFileRoute("/workspace")({
         content: "Track tasks, progress and decisions for your final-year AI project.",
       },
       { property: "og:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { property: "og:image:secure_url", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:site_name", content: "AI FYP Catalog 2026" },
@@ -51,6 +53,7 @@ export const Route = createFileRoute("/workspace")({
         content: "Track tasks, progress and decisions for your final-year AI project.",
       },
       { name: "twitter:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { name: "twitter:image:src", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
       
       // Additional SEO
       { name: "robots", content: "index, follow" },
