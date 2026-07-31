@@ -28,8 +28,8 @@ export const Route = createFileRoute("/projects/$projectId")({
         { property: "og:url", content: `https://zfai-fyp.vercel.app/projects/${p.id}` },
         { property: "og:title", content: `${p.title} — AI FYP Catalog 2026` },
         { property: "og:description", content: p.hook },
-        { property: "og:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
-        { property: "og:image:secure_url", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+        { property: "og:image", content: "https://zfai-fyp.vercel.app/og-image.jpg?v=2" },
+        { property: "og:image:secure_url", content: "https://zfai-fyp.vercel.app/og-image.jpg?v=2" },
         { property: "og:image:type", content: "image/jpeg" },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
@@ -39,8 +39,8 @@ export const Route = createFileRoute("/projects/$projectId")({
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: `${p.title} — AI FYP Catalog 2026` },
         { name: "twitter:description", content: p.hook },
-        { name: "twitter:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
-        { name: "twitter:image:src", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+        { name: "twitter:image", content: "https://zfai-fyp.vercel.app/og-image.jpg?v=2" },
+        { name: "twitter:image:src", content: "https://zfai-fyp.vercel.app/og-image.jpg?v=2" },
         
         // Additional SEO
         { name: "robots", content: "index, follow" },

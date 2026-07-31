@@ -26,8 +26,8 @@ export const Route = createFileRoute("/")({
         content:
           "Browse AI final-year project specs with stacks, roadmaps and datasets. Pick one and track it in a working kanban board all year.",
       },
-      { property: "og:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
-      { property: "og:image:secure_url", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { property: "og:image", content: "https://zfai-fyp.vercel.app/og-image.jpg?v=2" },
+      { property: "og:image:secure_url", content: "https://zfai-fyp.vercel.app/og-image.jpg?v=2" },
       { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
@@ -42,8 +42,8 @@ export const Route = createFileRoute("/")({
         content:
           "Browse AI final-year project specs with stacks, roadmaps and datasets. Pick one and track it in a working kanban board.",
       },
-      { name: "twitter:image", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
-      { name: "twitter:image:src", content: "https://zfai-fyp.vercel.app/og-image.jpg" },
+      { name: "twitter:image", content: "https://zfai-fyp.vercel.app/og-image.jpg?v=2" },
+      { name: "twitter:image:src", content: "https://zfai-fyp.vercel.app/og-image.jpg?v=2" },
       { name: "twitter:image:alt", content: "AI FYP Catalog 2026" },
       
       // Additional SEO
