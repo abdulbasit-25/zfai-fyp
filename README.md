@@ -9,6 +9,7 @@ A document can tell you what the projects are. It can't seed a kanban board from
 ## Features
 
 ### Catalog (`/`)
+
 - Featured hero card for **AI Co-Founder** plus a grid of the remaining ten ideas.
 - Live search across titles, hooks, domains, descriptions, keywords and every tech-stack entry.
 - Filters: domain chips (colour-coded, consistent everywhere), difficulty, timeline band, team size.
@@ -16,6 +17,7 @@ A document can tell you what the projects are. It can't seed a kanban board from
 - "Compare" toggle on every card (max 3) and a **Random pick** button for decision paralysis.
 
 ### Project detail (`/projects/$projectId`)
+
 - Full spec: description, numbered core features, stack grouped into Frontend / Backend / AI-ML / Infra.
 - Roadmap rendered as a vertical timeline with per-phase goals.
 - Collapsible "raw roadmap as checklist" preview.
@@ -23,6 +25,7 @@ A document can tell you what the projects are. It can't seed a kanban board from
 - Print-friendly CSS: `Print spec` produces a clean single-project PDF for supervisor meetings.
 
 ### Workspace (`/workspace`)
+
 - **Board** — kanban with To Do / In Progress / Blocked / Done, auto-seeded from the roadmap phases. Drag cards between columns (or use the quick-move buttons on touch devices), add and delete cards freely.
 - **Progress** — tickable roadmap checklist, a % progress bar, and a planned-vs-earned phase-weeks chart against the suggested timeline.
 - **Notes** — timestamped decision log for supervisor feedback, scope cuts and pivots.
@@ -32,6 +35,7 @@ A document can tell you what the projects are. It can't seed a kanban board from
 - Multiple projects can be started; switch between them from the workspace header.
 
 ### Compare (`/compare`)
+
 Side-by-side table of 2–3 projects: domain, difficulty, timeline, team size, roadmap length, total goals, full stacks with **shared tools highlighted**, and each project's challenges.
 
 ## Persistence

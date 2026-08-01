@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Moon, Sun, LayoutGrid, GitCompare, Hammer } from "lucide-react";
+import { Moon, Sun, LayoutGrid, GitCompare, Hammer, Info } from "lucide-react";
 import { useEffect } from "react";
 import { setTheme, useStore } from "@/lib/workspace";
 
@@ -23,10 +23,18 @@ export function SiteHeader() {
           <span className="label-mono text-primary">2026</span>
         </Link>
         <nav className="flex items-center gap-1">
-          <Link to="/" className={navLink} activeProps={{ className: "!text-foreground bg-secondary" }}>
+          <Link
+            to="/"
+            className={navLink}
+            activeProps={{ className: "!text-foreground bg-secondary" }}
+          >
             <LayoutGrid className="size-4" /> <span className="hidden sm:inline">Catalog</span>
           </Link>
-          <Link to="/compare" className={navLink} activeProps={{ className: "!text-foreground bg-secondary" }}>
+          <Link
+            to="/compare"
+            className={navLink}
+            activeProps={{ className: "!text-foreground bg-secondary" }}
+          >
             <GitCompare className="size-4" />
             <span className="hidden sm:inline">Compare</span>
             {compareCount > 0 && (
@@ -35,8 +43,19 @@ export function SiteHeader() {
               </span>
             )}
           </Link>
-          <Link to="/workspace" className={navLink} activeProps={{ className: "!text-foreground bg-secondary" }}>
+          <Link
+            to="/workspace"
+            className={navLink}
+            activeProps={{ className: "!text-foreground bg-secondary" }}
+          >
             <Hammer className="size-4" /> <span className="hidden sm:inline">Workspace</span>
+          </Link>
+          <Link
+            to="/about"
+            className={navLink}
+            activeProps={{ className: "!text-foreground bg-secondary" }}
+          >
+            <Info className="size-4" /> <span className="hidden sm:inline">About</span>
           </Link>
           <button
             aria-label="Toggle color theme"
@@ -57,9 +76,9 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-8 text-sm text-muted-foreground sm:px-6">
         <p className="label-mono mb-2 text-foreground">Doc source &amp; freshness</p>
         <p className="max-w-3xl leading-relaxed">
-          Catalog compiled July 2026 from the FYP idea brief. AI tooling moves fast — re-verify model
-          names, library versions and dataset licences against current docs before committing to a
-          project or quoting a stack in your proposal.
+          Catalog compiled July 2026 from the FYP idea brief. AI tooling moves fast — re-verify
+          model names, library versions and dataset licences against current docs before committing
+          to a project or quoting a stack in your proposal.
         </p>
         <p className="label-mono mt-6 border-t border-border pt-4">
           Powered by{" "}
@@ -73,7 +92,6 @@ export function SiteFooter() {
           </a>
         </p>
       </div>
-
     </footer>
   );
 }
