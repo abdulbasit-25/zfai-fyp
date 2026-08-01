@@ -128,34 +128,73 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-border bg-background p-5 sm:p-6">
-            <h2 className="text-xl font-semibold text-foreground">Built by</h2>
-            <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-              <li>
-                <span className="font-medium text-foreground">Creator:</span>{" "}
-                <a
-                  href="https://abdulbasit-archer.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 font-semibold text-primary underline underline-offset-4 hover:opacity-80"
-                >
-                  Abdul Basit
-                  <ArrowUpRight className="size-3.5" />
-                </a>
-              </li>
-              <li>
-                <span className="font-medium text-foreground">Co-collaborator:</span>{" "}
-                <a
-                  href="https://zainabfaraz.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 font-semibold text-primary underline underline-offset-4 hover:opacity-80"
-                >
-                  Zainab Faraz
-                  <ArrowUpRight className="size-3.5" />
-                </a>
-              </li>
-            </ul>
+          <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-background via-background to-muted/30 p-6 sm:p-8">
+            {/* Background Glow */}
+            <div className="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-primary/10 blur-3xl" />
+            <div className="absolute -bottom-16 -left-16 h-40 w-40 rounded-full bg-primary/5 blur-3xl" />
+
+            <div className="relative">
+              <div className="mb-6 flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  ✨
+                </div>
+
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground">Built with Passion</h2>
+                  <p className="text-sm text-muted-foreground">Crafted by talented developers.</p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                {/* Creator */}
+
+                {/* Collaborator */}
+                <div className="group rounded-2xl border border-border/60 bg-card/40 p-5 transition-all duration-300 hover:border-primary/40 hover:bg-card hover:shadow-lg hover:shadow-primary/5">
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-xl font-bold text-primary">
+                      ZF
+                    </div>
+
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+                        Creator
+                      </p>
+
+                      <div className="mt-1 text-lg font-semibold text-foreground">
+                        <CreatorTooltip
+                          name="Zainab Faraz"
+                          role="Software Engineer · AI/ML Enthusiast"
+                          meta="BS Software Engineering · Iqra University"
+                          href="https://zainabfaraz.vercel.app/"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="group rounded-2xl border border-border/60 bg-card/40 p-5 transition-all duration-300 hover:border-primary/40 hover:bg-card hover:shadow-lg hover:shadow-primary/5">
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-xl font-bold text-primary">
+                      AB
+                    </div>
+
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+                        Developer
+                      </p>
+
+                      <div className="mt-1 text-lg font-semibold text-foreground">
+                        <CreatorTooltip
+                          name="Abdul Basit"
+                          role="Web Developer · AI Specialist · IoT Expert"
+                          meta="BS Artificial Intelligence · SZABIST Islamabad"
+                          href="https://abdulbasit-archer.vercel.app/"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -315,5 +354,40 @@ function FaqItem({ question, children }: { question: string; children: React.Rea
       </summary>
       <p className="mt-3 leading-relaxed text-muted-foreground">{children}</p>
     </details>
+  );
+}
+
+function CreatorTooltip({
+  name,
+  role,
+  meta,
+  href,
+}: {
+  name: string;
+  role: string;
+  meta: string;
+  href: string;
+}) {
+  return (
+    <span className="group relative inline-block">
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 font-semibold text-primary underline underline-offset-4 hover:opacity-80"
+      >
+        {name}
+        <ArrowUpRight className="size-3.5" />
+      </a>
+
+      <span
+        role="tooltip"
+        className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 w-60 -translate-x-1/2 rounded-lg border border-border bg-card p-3 text-left opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100"
+      >
+        <span className="block text-xs font-semibold text-foreground">{role}</span>
+        <span className="label-mono mt-1 block text-[11px] text-muted-foreground">{meta}</span>
+        <span className="absolute left-1/2 top-full -mt-px h-2 w-2 -translate-x-1/2 rotate-45 border-b border-r border-border bg-card" />
+      </span>
+    </span>
   );
 }
