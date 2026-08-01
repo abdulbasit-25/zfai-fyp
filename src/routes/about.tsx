@@ -145,7 +145,15 @@ function AboutPage() {
               </li>
               <li>
                 <span className="font-medium text-foreground">Co-collaborator:</span>{" "}
-                <span className="font-semibold text-foreground">Zainab Faraz</span>
+                <a
+                  href="https://zainabfaraz.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-semibold text-primary underline underline-offset-4 hover:opacity-80"
+                >
+                  Zainab Faraz
+                  <ArrowUpRight className="size-3.5" />
+                </a>
               </li>
             </ul>
           </div>
